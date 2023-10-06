@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <div id="content"></div><div class="jumbotron text-center"><h1><emp><i>Food Provision</i></emp></h1><p class = "pdec">"<i>Help ever, Hurt never</i>"</p></div>
+  </header>
+
+  <div class = "container-fluid">
+  <main>
+
+      <div class = "row">
+          <div class = "col-md-12">
+            <h2 class = "headdec">Worried about rural food and supplies provision?</h2>
+            <p class = "pdec">Register here to participate in a <i>free</i> off-site rural foodcand supplies distribution program!</p>
+          </div>
+      </div>
+
+     <br>
+
+     <div class = "container">
+      <main>
+        <div class = "row">
+        <div class = "col-md-8">
+        <form class = "sign-in" action = "http://akulservices.pythonanywhere.com/foodservice" method = "POST">
+          <div class = "text-center mb-4">
+            <h1 class = "mb-3 font-weight-normal" style = "color: #000066;">Register for Food Distribution event!</h1>
+            {{message}}
+          </div>
+          <div class = "form-label-group mb-4">
+            <input type="email" id="inputEmail1" name = "inputEmail1" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputEmail1" class = "sr-only">Email address</label>
+          </div>
+          <div class = "form-label-group mb-4">
+            <input type="password" id="inputPassword1" name = "inputPassword1" class="form-control" placeholder="Password" required>
+            <label for="inputPassword1" class = "sr-only">Password</label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit" id="result">Register</button>
+        </form>
+        </div>
+        </div>
+    </main>
+   </div>
+
+
+ </main>
+</div>
+
+<br>
+
+<div id = "footercontent">
+</div>
+{% endblock %}

@@ -1,0 +1,94 @@
+.navbar-custom{
+    background-color: #000066;
+}
+
+.navbar-custom2{
+    background-color: rgb(88, 228, 24);
+}
+
+.navbar-col{
+    background-color: rgb(20, 107, 221);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text{
+    color: whitesmoke;
+}
+
+.navbar-col .navbar-brand,
+.navbar-custom .navbar-text{
+    color: whitesmoke;
+}
+
+.navbar-custom2 .navbar-brand,
+.navbar-custom .navbar-text{
+    color: whitesmoke;
+}
+
+.nav-link{
+    font-size: large;
+    text-decoration: solid;
+  }
+
+  .footer{
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    font-size: medium;
+    background-color: #000066;
+    text-align: center;
+    color: antiquewhite;
+   }
+
+   #content{
+   margin: 0;
+   padding: 0;
+   }
+
+   #footercontent{
+   margin: 0;
+   padding: 0;
+   }
+
+   .footerlinks{
+     padding: 3px;
+   }
+
+   .headdec{
+     color: #000066;
+     text-align: center;
+     text-decoration: solid;
+   }
+
+   .pdec{
+     text-align: center;
+     text-decoration: solid;
+     font-size: x-large;
+   }
+
+   .spandec{
+     display: inline-block;
+     width: 250px;
+     height: 250px;
+     color: grey;
+     margin: 6px;
+   }
+
+   html{
+     min-height: 100%;
+   }
+   
+   .textdec{
+     color: black;
+   }
+
+   .sign-in{
+    max-width: 420px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .form-label-group{
+    position: relative;
+    margin-bottom: 1rem;
+  }

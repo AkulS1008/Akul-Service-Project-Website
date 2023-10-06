@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <div id="content"></div><div class="jumbotron text-center"><h1>Reset Password</h1></div>
+  </header>
+
+  <div class = "container">
+   <main>
+     <div class = "row">
+     <div class = "col-md-8">
+     <form class = "sign-in" action = "http://akulservices.pythonanywhere.com/reset_pwd" method = "POST">
+       <div class = "text-center mb-4">
+         <h1 class = "mb-3 font-weight-normal" style = "color: #d6d6fd;">Please provide the following to change your password:</h1>
+       </div>
+       <div>
+           <p style="color: red;"><b>{{error_message}}</b></p>
+           <p style="color: green;"><b>{{ok_message}}</b></p>
+       </div>
+       <div class = "form-label-group mb-4">
+         <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+         <label for="inputEmail" class = "sr-only">Provide Email Address</label>
+       </div>
+       <div class = "form-label-group mb-4">
+        <input type="password" id="inputPasswordTemp" name="inputPasswordTemp" class="form-control" placeholder="Temporary Password" required autofocus>
+        <label for="inputPasswordTemp" class = "sr-only">Provide Temporary Password</label>
+      </div>
+       <div class = "form-label-group mb-4">
+        <input type="password" id="inputPasswordNew" name="inputPasswordNew" class="form-control" placeholder="New Password" required autofocus>
+        <label for="inputPasswordNew" class = "sr-only">Provide New Password</label>
+      </div>
+      <div class = "form-label-group mb-4">
+        <input type="password" id="inputPasswordNew2" name="inputPasswordNew2" class="form-control" placeholder="Confirm New Password" required autofocus>
+        <label for="inputPasswordNew2" class = "sr-only">Confirm New Password</label>
+      </div>
+       <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+     </form>
+     </div>
+     </div>   
+ </main>
+</div>
+
+<br>
+
+<script>
+  function check()
+  {
+     var a = document.getElementById("inputPasswordNew").value;
+     var b = document.getElementById("inputPasswordNew2").value;
+     if(a != b)
+     {
+        alert("Please fill the correct confirmation password");
+        return false;
+     }
+     return true;
+  }
+</script>
+
+
+  <div id="footercontent">
+  </div>
+{% endblock %}

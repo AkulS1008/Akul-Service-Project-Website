@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <div id="content"></div><div class="jumbotron text-center"><h1>Participants</h1></div>
+    <div><p class = "pdec">Here are the lists of participants who have signed up to participate in an event!</p></div>
+  </header>
+  <div class = "container-fluid">
+    <main>
+      <div>
+        {{message}}
+      </div>
+      <div class = "container">
+          <div class = "card-columns card-deck">
+          {% for r in res %}
+            <div class = "card bg-primary">
+              <div class = "card-body text-center">
+                <p class = "card-text"><h1>{{name}} <p class = "pdec">{{r[2]}}</p></h1></p>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+          </div>
+      </main>
+    </div>
+
+    <br>
+
+      <div id="footercontent">
+       </div>
+{% endblock %}

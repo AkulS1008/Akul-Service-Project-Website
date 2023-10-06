@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <div id="content"></div><div class="jumbotron text-center"><h1>Activation</h1></div>
+  </header>
+
+  <div class = "container">
+   <main>
+     <div class = "row">
+     <div class = "col-md-8">
+     <form class = "sign-in" action = "http://akulservices.pythonanywhere.com/activation" method = "POST">
+       <div class = "text-center mb-4">
+         <h1 class = "mb-3 font-weight-normal" style = "color: #000066;">Please provide the following to activate your email:</h1>
+       </div>
+       <div>
+           <p style="color: red;"><b>{{error_message}}</b></p>
+           <p style="color: green;"><b>{{ok_message}}</b></p>
+       </div>
+       <div class = "form-label-group mb-4">
+         <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+         <label for="inputEmail" class = "sr-only">Provide Email Address</label>
+       </div>
+       <div class = "form-label-group mb-4">
+        <input type="input" id="activation_code" name="activation_code" class="form-control" placeholder="Activation Code" required autofocus>
+        <label for="activation_code" class = "sr-only">Provide Activation Code</label>
+      </div>
+       <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+     </form>
+     </div>
+     </div>   
+ </main>
+</div>
+
+<br>
+
+
+  <div id="footercontent">
+  </div>
+{% endblock %}

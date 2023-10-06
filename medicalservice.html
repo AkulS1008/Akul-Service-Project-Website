@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <div id="content"></div><div class="jumbotron text-center"><h1><emp><i>Medical Service</i></emp></h1><br><p class = "pdec">"<i><b>It's better to be safe than wealthy</b></i>"</p></div>
+  </header>
+
+  <div class = "container-fluid">
+  <main>
+
+      <div class = "row">
+          <div class = "col-md-12">
+            <h2 class = "headdec">Worried about Rural Health?</h2>
+            <p class = "pdec">Register here to participate in a <i>free</i> off-site rural medical service!</p>
+          </div>
+      </div>
+
+     <br>
+
+     <div class = "container">
+      <main>
+        <div class = "row">
+        <div class = "col-md-8">
+        <form class = "sign-in" action = "http://akulservices.pythonanywhere.com/medicalservice" method = "POST">
+          <div class = "text-center mb-4">
+            <h1 class = "mb-3 font-weight-normal" style = "color: #000066;">Register for Rural Health event!</h1>
+            {{message}}
+          </div>
+          <div class = "form-label-group mb-4">
+            <input type="email" id="inputEmail1" name="inputEmail1"  class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputEmail1" class = "sr-only">Email address</label>
+          </div>
+          <div class = "form-label-group mb-4">
+            <input type="password" id="inputPassword1" name="inputPassword1" class="form-control" placeholder="Password" required>
+            <label for="inputPassword1" class = "sr-only">Password</label>
+          </div>
+          <!--
+          <div>
+            <h7>Other events applied to</h7>
+            <div>
+              <input type="radio" id = "rda" value = "Food Distribution" name="event">
+              <label for="rda">Food Distribution</label>
+            </div>
+            <div>
+              <input type="radio" id = "rdb" value = "Rural Sanitory Health" name="event">
+              <label for="rdb">Rural Sanitory Health</label>
+            </div>
+            <div>
+              <input type="radio" id = "rdc" value = "None" name="event">
+              <label for="rdc">None</label>
+            </div>
+            <br>
+          </div>
+          <div>
+            <h7>Area of Medical Expertise</h7>
+            <div>
+              <input type="radio" id = "rdd" value = "ENT Health" name="mexp">
+              <label for="rdd">ENT Health</label>
+            </div>
+            <div>
+              <input type="radio" id = "rde" value = "Pediatric Health" name="mexp">
+              <label for="rde">Pediatric Health</label>
+            </div>
+            <div>
+              <input type="radio" id = "rdg" value = "Pulmonology" name="mexp">
+              <label for="rdg">Pulmonology</label>
+            </div>
+            <div>
+              <input type="radio" id = "rdh" value = "Other" name="mexp">
+              <label for="rdh">Other</label>
+            </div>
+            <br>
+          </div>
+          -->
+          <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="return check()" >Register</button>
+        </form>
+        </div>
+        </div>
+    </main>
+   </div>
+
+ <script src="script.js"></script>
+  <script>
+    function check()
+    {
+       var a = document.getElementById("inputEmail").value;
+       alert(a);
+       if(a.length < 7)
+       {
+          alert("Please fill the correct email");
+          return false;
+       }
+       else
+        return true;
+     }
+   </script>
+
+<div id = "footercontent">
+</div>
+{% endblock %}

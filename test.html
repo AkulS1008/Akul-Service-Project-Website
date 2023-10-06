@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <div class="jumbotron text-center">
+      <h1>Testing Page</h1>
+    </div>
+
+
+  </head>
+  {{ form_data.get("inputEmail1") }}
+  {{ form_data.get("inputPassword1") }}
+    {% for key,value in form_data.items() %}
+   <h2> {{key}}</h2>
+   <p> {{value}}</p>
+   {% endfor %}

@@ -1,0 +1,50 @@
+
+<nav class="navbar navbar-expand-sm navbar-custom navbar-dark sticky-top">
+    <div class = "container-fluid">
+    <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+         <a class="nav-link" href="home">Home</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="login">Log In</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="detail">Volunteer</a>
+       </li>
+     </ul>
+
+      <ul class = "navbar-nav">
+        <li>
+          <a href="#">
+            <img src = "./static/logo.jpg" alt = "Logo" style = "width:40px;">
+          </a>
+        </li>
+    </ul>
+    
+    <span class = "navbar-text">
+    {% if 'name' in session %}
+      {{session['name']}}
+    {% else %}
+      Hello Guest
+    {% endif %}
+    </span>
+    
+    {% if 'name' in session%}
+    <span class = "navbar-text">
+        <a href = "logout">Logout</a>
+      </span>
+    {% endif %}
+   </div>
+  </nav>
+
+<script>
+$(document).ready(function(){
+var pathname = window.location.pathname;
+var pages = ['home', 'login', 'detail'];
+$('.nav-item').each(function(i) {
+ if (pathname.includes(pages[i])) $(this).addClass('active');
+ else if ($(this).hasClass('active')) $(this).removeClass('active');
+});
+});
+</script>

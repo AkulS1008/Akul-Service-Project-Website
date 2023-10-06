@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+    <div id="content"></div><div class="jumbotron text-center"><h1>Feedback</h1></div>
+  </header>
+
+  <div class = "container-fluid">
+   <main>
+     <div class = "row">
+     <div class = "col-md-8">
+     <form class = "sign-in" action = "/test" method = "POST">
+       <div class = "text-center mb-4">
+         <h1 class = "mb-3 font-weight-normal" style = "color: #000066;">Give your feedback here:</h1>
+         <p class = "pdec">Tell us how we can enhance the village service experience!</p>
+       </div>
+       <div class = "form-label-group mb-4">
+         <textarea class = "form-control" rows = "10" placeholder="Type Here"></textarea>
+       </div>
+       <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+     </form>
+     </div>
+     </div>   
+   </main>
+  </div>
+
+<br>
+
+  <div id="footercontent">
+  </div>
+{% endblock %}
